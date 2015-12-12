@@ -9,6 +9,5 @@ end
 class Server < Sinatra::Base
 	post '/add/:name/score/:score/' do
 		Score.create(name: params['name'], score: params['score'].to_i)
-		render :nothing
 	end
 end
