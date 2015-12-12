@@ -10,4 +10,9 @@ class Server < Sinatra::Base
 	post '/add/:name/score/:score/' do
 		Score.create(name: params['name'], score: params['score'].to_i)
 	end
+
+	get '/highscores.json' do
+		content_type :json
+		Score.order(:score).limit(10).to_json
+	end
 end
