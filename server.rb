@@ -1,7 +1,10 @@
-class Server < Sinatra::Base
-	register Sinatra::ActiveRecordExtension
-	set :data, {adapter: 'sqlite3', database: 'scores.sqlite3' }
+require 'sinatra'
+require 'sinatra/activerecord'
 
+class Score < ActiveRecord::Base
+end
+
+class Server < Sinatra::Base
 	post '/add/:name/score/:score/' do
 		# add to database
 	end
