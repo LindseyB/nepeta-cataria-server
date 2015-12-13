@@ -13,6 +13,6 @@ class Server < Sinatra::Base
 
 	get '/highscores.json' do
 		content_type :json
-		Score.order(:score).limit(10).to_json
+		Score.order(score: :desc).limit(10).to_json
 	end
 end
