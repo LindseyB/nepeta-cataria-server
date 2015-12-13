@@ -2,3 +2,7 @@ development: &development
   adapter: sqlite3
   database: db/development.sqlite3
 
+production: &production
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
