@@ -5,10 +5,10 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem 'json'
 
-group :development
+group :development do
   gem 'sqlite3'
 end
 
-group :production
+group :production do
   gem 'pg'
 end
