@@ -19,10 +19,12 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.8.3)
+    pg (1.1.4)
+    pg (1.1.4-x86-mingw32)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    rake (10.4.2)
+    rake (12.3.2)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -42,6 +44,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  json
+  pg
   rake
   sinatra
   sinatra-activerecord
